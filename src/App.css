@@ -7,6 +7,10 @@ body {
   pointer-events: none;
 }
 
+.navbar{
+  padding-bottom: 2rem;
+}
+
 .colorModeButton{
   margin-left: auto;
   margin-right: 3rem;

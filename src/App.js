@@ -24,34 +24,21 @@ function NavBar() {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
   return (
-    <div style={{display: "flex"}}>
-    {/* <Box
-      sx={{
-        display: 'flex',
-        width: '100%',
-        height: '100%',
-        // alignItems: 'center',
-        // justifyContent: 'center',
-        bgcolor: 'background.default',
-        color: 'text.primary',
-        borderRadius: 1,
-        p: 3,
-      }}
-    > */}
-      
+    <div className="navbar">
+      <div style={{display: "flex"}}>
 
-      {/* <Card> */}
-        <Typography variant='h1' className="topic1" color="text.primary">Personal-Clipboard</Typography>
-      {/* </Card>  */}
+        {/* <Card> */}
+          <Typography variant='h1' className="topic1" color="text.primary">Personal-Clipboard</Typography>
+        {/* </Card>  */}
 
-      <Button onClick={colorMode.toggleColorMode} className="colorModeButton"sx={{height:"2.5rem"}}>
-        {theme.palette.mode} mode
-        <IconButton sx={{ ml: 1 }} color="inherit">
-          {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
-        </IconButton>
-      </Button>
-      
-    {/* </Box> */}
+        <Button onClick={colorMode.toggleColorMode} className="colorModeButton"sx={{height:"2.5rem"}}>
+          {theme.palette.mode} mode
+          <IconButton sx={{ ml: 1 }} color="inherit">
+            {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
+        </Button>
+     
+      </div>
     </div>
   );
 }
