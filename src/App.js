@@ -1,6 +1,11 @@
 import React from 'react';
 import './App.css';
 import Home from './pages/Home/Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
@@ -78,22 +83,25 @@ export default function App() {
     <div className="App" style={{height:"100%"}}>
       <ColorModeContext.Provider value={colorMode} sx={{height:"100%"}}>
         <ThemeProvider theme={theme} sx={{height:"50rem"}}>
-        <Box
-            sx={{
-              width: '100%',
-              height: '100%',
-              // alignItems: 'center',
-              // justifyContent: 'center',
-              bgcolor: 'background.default',
-              color: 'text.primary',
-              borderRadius: 1,
-              p: 3,
-            }}
-          >
+          <Box sx={{
+                width: '100%',
+                height: '100%',
+                // alignItems: 'center',
+                // justifyContent: 'center',
+                bgcolor: 'background.default',
+                color: 'text.primary',
+                borderRadius: 1,
+                p: 3,
+              }}
+            >
 
-          <NavBar />
-          
-          <Home />
+            <NavBar />
+            
+            <Router>
+              <Switch>
+                <Route exact path="/" component={Home}/>
+              </Switch>
+            </Router>
 
           </Box>
         </ThemeProvider>

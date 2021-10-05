@@ -19,16 +19,16 @@ const Home = (props) =>{
             
             <TextField
                 id="outlined-multiline-static"
-                label="Multiline"
+                label="Copy your things here"
                 multiline
                 rows={4}
-                defaultValue="Default Value"
+                defaultValue=""
             />
 
             <div className="btn-stack-1">
                 <Stack spacing={2} direction="row">
-                    <Button variant="contained">Contained</Button>
-                    <Button variant="contained">Contained</Button>
+                    <Button variant="outlined">Optional</Button>
+                    <Button variant="contained">Paste Snip</Button>
                 </Stack>
             </div>
         </div>
