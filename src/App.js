@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Home from './pages/Home/Home';
+import Footer from './components/footer/Footer';
 import {
   BrowserRouter as Router,
   Switch,
@@ -96,12 +97,14 @@ export default function App() {
             >
 
             <NavBar />
-            
+
             <Router>
               <Switch>
                 <Route exact path="/" component={Home}/>
               </Switch>
             </Router>
+
+            <Footer />
 
           </Box>
         </ThemeProvider>
