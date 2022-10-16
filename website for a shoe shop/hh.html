@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--<title>Sneakers Store</<title>-->
+<meta name="viewport" content="width=device-width,
+  initial-scale=1.0"><!--fix the website view-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+   integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+  <style type="text/css">/*CSS starting*/
+*{box-sizing : border-box;
+  padding:0;
+  margin:0;
+}
+html {
+  font-family:Calibri,sans-serif;""
+}
+
+.header{
+  z-index: :1;
+  background-color:#365C9A;
+  color:#F1F1F1;
+  position: fixed;
+  width: 100%;
+  padding:25px;
+
+}
+ul{
+  list-style-type: none;
+  margin: 0px;
+  padding:0;
+  overflow: hidden;
+  position: fixed;
+  top:8px;
+  width: 100%;
+  /*background-color: #333;*/
+
+}
+
+li{
+  float: right;
+
+}
+
+li a{
+  dislay:block;
+  color:#F1F1F1;
+  text-align:center;
+  padding:14px 16px;
+  text-decoration:none;
+
+}
+
+li a:hover{
+  opacity:0.5;
+}
+@media only screen and (max-width:768px){
+.header{width:100%;}
+
+  ul{width:100%; padding-top: 50px;
+  }
+  li a{
+    width:100%
+  }
+  li{width:25%;
+
+  }
+}
+}
+/*to make the all borders same size*/
+{
+  box-sizing:border-box;
+}
+
+
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.text1{
+  color:#F1F1F1;
+  text-align:left;
+  style="font-family:calibri;"
+
+}
+
+.large{
+  font-size: 500%;
+}
+
+
+
+
+.desc {padding-top: 10px;
+    text-align: center;
+line-height: 1.4;
+}
+
+
+
+
+#homepage{
+  height:750px;
+  background-image: linear-gradient(90deg, #4FA15F 33.33%, #4E84C2 33.33%);
+  width:100%;
+  padding:0;
+  margin:0;
+
+}
+/*picture in the home*/
+.display1{
+
+  float:left;
+  width:600px;
+  height:400px;
+  margin-left:9%;
+  margin-top:200px;
+  transition: transform 1s;
+
+}
+.display1:hover {
+  transform:scale(1.04)
+}
+
+.display2{
+
+  float:left;
+  width:600px;
+  height:400px;
+  margin-top:200px;
+  margin-left: 20px;
+
+}
+
+@media only screen and ( max-width:768px) {
+#homepage { width:100%;height:1400px;
+		background-image:none;
+		background-color:#4E84C2;
+
+		}
+    .display1{
+      width:100%;height: auto;
+      margin-left:auto;
+    }
+    .display2{
+      width:100%;height: auto;
+      margin-left: :auto;
+    }
+  }
+
+.button1 {
+  background-color:F1F1F1; /* white */
+  border-radius:25px;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border:#F1F1F1;
+  font-family:calibri;
+  width:200px;
+}
+
+#bestsellers{
+  height:400px;
+  left:0;
+  right:0;
+  width:100%;
+
+}
+.gallery1 {
+
+
+  float:left;
+  width: 300px;
+  height:300px;
+  margin-left: 10%;
+  margin-top: 50px;
+  transition: transform 1s;
+
+}
+.gallery1:hover{
+  transform: translateY(-8px);
+  border : 1px solid #F1F1F1 ;
+  box-shadow: 0 0 10px #515151;
+}
+
+.img1{
+  padding: 10px;
+  float:left
+  width:200px;
+  height:180px;
+}
+
+.star1{
+  float:left;
+  width: 100%;
+  height:25px;
+  color:orange;
+
+}
+.img2{
+  float:left;
+  width: 300px;
+  height:150px;
+  top:0;
+}
+
+.star2{
+  float:left;
+  width: 100%;
+  height:25px;
+  color:orange;
+
+}
+
+.img3{
+  float:left;
+  width: 100%;
+  height:50px;
+}
+
+.star3{
+  float:left;
+  width: 100%;
+  height:25px;
+  color:orange;
+
+
+}
+@media only screen and ( max-width:768px){
+  #bestsellers{
+    width: 100%;
+    height:1000px;
+    margin-left:100px;
+  }
+  .gallery1{
+    width:100%;
+    height: auto;
+      }
+
+
+}
+#sizechart{
+  height:400px;
+  left:0;
+  right:0;
+  width:100%;
+
+}
+@media only screen and ( max-width:768px){
+  #sizechart{width:100%;
+  }
+}
+
+table {
+  font-family:sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  height:50%;
+  margin-left:9%;
+  margin-top:80px;
+}
+
+td, th {
+
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color:#F1F1F1;
+  border-style: solid none solid none;
+  border-width:thin;
+}
+tr:hover{
+  background-color:#4E84C2;
+}
+@media only screen and ( max-width:768px){
+  #sizechart{
+    width:100%;
+  }
+}
+#ourteam{
+  height:500px;
+  left:0;
+  right:0;
+  width:100%;
+
+}
+.gallery2 {
+
+
+  float:left;
+  width: 250px;
+  height:320px;
+  margin-top: 80px;
+  margin-left: 6.5%;
+
+}
+
+
+@media only screen and ( max-width:768px){
+  #ourteam{
+    width:100%;
+    height: 1100px;
+
+  }
+  .gallery2{
+    width:100%;
+    margin-left: 30%;
+
+
+  }
+}
+
+#contactus{
+  height:600px;
+  left:0;
+  right:0;
+  width:100%;
+
+}
+
+input[type=text],input[type=email] {
+  width: 40%;
+  padding: 25px 1px ;
+  border: none;
+  border-bottom: 1px solid black;
+  outline:none;
+
+}
+
+
+
+input[type=text]:focus {
+outline: 2px solid rgb(35, 173, 278);
+      box-shadow:0 0 5px rgb(35, 173, 278);
+}
+
+input[type=email]:focus {
+outline: 2px solid rgb(35, 173, 278);
+			box-shadow:0 0 5px rgb(35, 173, 278);
+}
+
+input[type=submit] {
+  margin: 10px 10px;
+           padding: 12px 16px;
+                     background-color: #365C9A;
+                     color:white;
+                     border:none;
+                     border-radius:25px;
+                     outline:none;
+}
+
+input[type=submit]:hover {
+  opacity:0.5;
+}
+
+
+.display3{
+
+  float:left;
+  width:700px;
+  height:500px;
+  margin-left:2%;
+  margin-top:50px;
+
+
+}
+
+.display4{
+
+  float:left;
+  width:700px;
+  height:500px;
+  margin-top:50px;
+}
+@media only screen and ( max-width:768px){
+  #contactus{
+    width:100%;height: 1800px;
+  }
+  .display3{
+    width:100%;
+  }
+  .display4{
+    width:100%;
+
+  }
+}
+/*for mobile devices*/
+[class*="col-"] {
+width:100%;
+
+  }
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+
+
+@media only screen and ( max-width:768px){
+  .footer{
+    width:100%;
+  }
+}
+
+
+.footer{
+
+  left:0;
+  right:0;
+  width:100%;
+  bottom:0;
+  background-color:#365C9A;
+  text-align:center;
+  padding:10px;
+
+
+}
+</style>
+</head>
+<body>
+
+
+
+
+<div class="header" id="header">
+    <h1>Sneakers store </h1>
+
+    <ul>
+
+      <li><a  href="#contactus">Contact Us</a></li>
+      <li><a  href="#ourteam">Our Team</a></li>
+      <li><a  href="#sizechart">Size Chart</a></li>
+      <li><a  href="#homepage">Home</a></li>
+      </ul>
+
+
+        </div>
+
+<div id ="homepage">
+
+    <img src="bestseller1.jpg" alt="shoe1" class="display1" height="400" width="600">
+    <img src="bestseller2.jpg" alt="shoe1" class="display1" height="400" width="600">
+    <img src="bestseller3.jpg" alt="shoe1" class="display1" height="400" width="600">
+
+
+
+
+  <div class="display2">
+  <p class="text1" style="font-family:sans-serif;">Sneakers Store Sale! </p><br>
+  <p class="text1 large " > New sports</p>
+  <p class="text1 large"> collection already</p>
+    <p class=" text1 large "> on sale</p>
+
+
+    <button class="button1" ><a style="text-decoration:none;color:black" href="#bestsellers">
+                    Start Shopping</a></button>
+
+</div>
+</div>
+
+
+
+
+  <div id ="bestsellers">
+
+    <div class="gallery1">
+      <div class="img1">
+      <img src="bestseller1.jpg" alt="shoe1" width="277" height="180">
+</div>
+        <div class="desc" >
+
+        <p style="font-weight:bold;font-size:20px">  BROWN GLASSES </p>
+        <p>  Casual Sneakers </p>
+
+          <div class="star1">
+            <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          </div>
+
+          <div class="gallery1">
+              <div class="img1">
+            <img src="bestseller2.jpg" alt="shoe2" width="277" height="180">
+       </div>
+  <div class="desc" >
+
+            <p style="font-weight:bold;font-size:20px"> BROWN GLASSES</p>
+              <p>  Casual Sneakers</p>
+
+                <div class="star2">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+           </div>
+                </div>
+
+                </div>
+
+                <div class="gallery1">
+                    <div class="img1">
+                    <img src="bestseller3.jpg" alt="shoe3" width="277" height="180">
+                  </div>
+                    <div class="desc" >
+
+                  <p style="font-weight:bold;font-size:20px">    BROWN GLASSES </p>
+                  <p>    Casual Sneakers</p>
+
+                      <div class="star3">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star-o" aria-hidden="true"></i>
+         </div>
+                      </div>
+
+                      </div>
+
+
+
+
+
+  </div>
+
+
+    <div id ="sizechart">
+    <p style="font-family:sans-serif;text-align:center;font-size:30px">Size Chart</p>
+<table>
+  <tr>
+    <th>cm</th>
+      <th>23,5</th>
+        <th>24,4</th>
+         <th>25,4</th>
+           <th>25</th>
+              <th>27</th>
+               <th>27,9</th>
+                 <th>28,6</th>
+                  <th>29,4</th>
+                       </tr>
+                        <tr>
+                <td>EU</td>
+              <td>39</td>
+              <td>40</td>
+             <td>41</td>
+            <td>42</td>
+            <td>43</td>
+          <td>44</td>
+         <td>45</td>
+        <td>46</td>
+      </tr>
+
+      <tr>
+          <td>UK</td>
+            <td>5,5</td>
+              <td>6,5</td>
+                <td>7,5</td>
+                  <td>8,5</td>
+                    <td>9,5</td>
+                      <td>10,5</td>
+                        <td>11,5</td>
+                          <td>12,5</td>
+                        </tr>
+
+                        <tr>
+                            <td>US</td>
+                              <td>6</td>
+                                <td>7</td>
+                                  <td>8</td>
+                                    <td>9</td>
+                                      <td>10</td>
+                                        <td>11</td>
+                                          <td>12</td>
+                                            <td>13</td>
+                                          </tr>
+                                        </table>
+    </div>
+
+
+      <div id ="ourteam">
+
+        <div style="padding:15px;" >
+          <p style="font-family:sans-serif;text-align:center;font-size:30px"> STILL IN DOUBT? COME
+            AND OUR TEAM WILL HELP YOU</p>
+          </div>
+        <div class="gallery2">
+          <img src="user1.JPG" alt="user1" width="250" height="250">
+
+            <div class="desc" >
+              <p style="text-align:left;font-weight:bold" >Amanda Fernandz</p>
+              <p style="color: #4E84C2;text-align:left">Sales Manager</p>
+              </div>
+
+              </div>
+
+
+          <div class="gallery2">
+            <img src="user2.JPG" alt="user2"width="250" height="250">
+                <div class="desc" >
+                <p style="text-align:left;font-weight:bold" >Amanda Fernandz</p>
+                <p style="color: #4E84C2;text-align:left">Sales Manager</p>
+                </div>
+
+                </div>
+
+
+          <div class="gallery2">
+            <img src="user3.JPG" alt="user3" width="250" height="250">
+              <div class="desc" >
+                  <p style="text-align:left;font-weight:bold" >Amanda Fernandz</p>
+                  <p style="color: #4E84C2;text-align:left">Sales Manager</p>
+                  </div>
+
+                  </div>
+
+              <div class="gallery2">
+
+                <img src="user4.JPG" alt="user4" width="250" height="250">
+
+                  <div class="desc" >
+                    <p style="text-align:left;font-weight:bold " >Amanda Fernandz</p>
+                    <p style="color: #4E84C2;text-align:left">Sales Manager</p>
+                    </div>
+
+                    </div>
+                    </div>
+
+
+
+        <div id ="contactus">
+          <div class="display3">
+<p>GET IN TOUCH WITH US AND WE CAN HELP YOU</P>
+  <P style="font-size:45px;">Come to us or ask a question right now </p>
+
+<form action="mailto:someone@example.com" method="post" enctype="text/plain">
+        <input type="text" id="fname" name="firstname" placeholder="Your Name*"> &nbsp; &nbsp; &nbsp;
+
+        <input type="text" id="lname" name="lastname" placeholder="Your Last Name">
+
+        <input type="email" id="email" name="email" placeholder="Email*">&nbsp; &nbsp; &nbsp;
+
+        <input type="text" id="phn" name="phnno" placeholder="Phone">
+
+        <input style="width:100%;" type="text" id="msg" name="message" placeholder="Message">
+        <br><br>
+
+
+
+
+        <input type="submit" value="Send Message">
+
+
+</form>
+
+
+
+
+
+          </div>
+
+          <div class="display4">
+             <a href="https://www.google.lk/maps">
+          <img src="map.jpg" height="500" width="700"></div>
+    </a>
+          </div>
+
+
+
+          <div class="footer">
+            Copyright &copy 2020-Sneakers store-All rights reserved.
+
+            </div>
+
+            <script type="text/javascript">
+
+
+
+                   var header = document.getElementById('header');
+
+                   window.onscroll = function(){
+
+                     if ( window.pageYOffset > 60){
+
+                      header.style.background = "#365C9A";
+                     }
+                     else{
+                      header.style.background = "transparent";
+                     }
+
+                   }
+
+            </script>
+
+
+            <script>
+            var myIndex = 0;
+              carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("display1");
+              for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}
+                x[myIndex-1].style.display = "block";
+              setTimeout(carousel, 3000);
+            }
+
+            </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+    </html>
